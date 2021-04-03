@@ -18,7 +18,7 @@ module.exports = {
           }
         );
 
-        return res.status(200).json({ token, status: "sucess" });
+        return res.status(200).json({ token, status: "sucess", error: "salom" });
       }
       throw new Error();
     } catch (err) {
