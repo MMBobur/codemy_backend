@@ -15,7 +15,7 @@ exports.create = (req, res) => {
     .catch((err) => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while creating the Staffs.",
+          err.message || "Some error occurred while creating the courses.",
       });
     });
 };
@@ -30,7 +30,7 @@ exports.findAll = (req, res) => {
     })
     .catch((err) => {
       res.status(500).send({
-        message: err.message || "Some error occurred while retrieving staffs.",
+        message: err.message || "Some error occurred while retrieving courses.",
       });
     });
 };
@@ -44,7 +44,7 @@ exports.findOne = (req, res) => {
     })
     .catch((err) => {
       res.status(500).send({
-        message: "Error retrieving Staff with id=" + id,
+        message: "Error retrieving courses with id=" + id,
       });
     });
 };
@@ -58,17 +58,17 @@ exports.update = (req, res) => {
     .then((num) => {
       if (num == 1) {
         res.send({
-          message: "Staff was updated successfully.",
+          message: "courses was updated successfully.",
         });
       } else {
         res.send({
-          message: `Cannot update Staff with id=${id}. Maybe Staff was not found or req.body is empty!`,
+          message: `Cannot update courses with id=${id}. Maybe courses was not found or req.body is empty!`,
         });
       }
     })
     .catch((err) => {
       res.status(500).send({
-        message: "Error updating Staff with id=" + id,
+        message: "Error updating courses with id=" + id,
       });
     });
 };
@@ -82,17 +82,17 @@ exports.delete = (req, res) => {
     .then((num) => {
       if (num == 1) {
         res.send({
-          message: "Staff was deleted successfully!",
+          message: "Courses was deleted successfully!",
         });
       } else {
         res.send({
-          message: `Cannot delete Staff with id=${id}. Maybe Staff was not found!`,
+          message: `Cannot delete Courses with id=${id}. Maybe Courses was not found!`,
         });
       }
     })
     .catch((err) => {
       res.status(500).send({
-        message: "Could not delete Staff with id=" + id,
+        message: "Could not delete Courses with id=" + id,
       });
     });
 };

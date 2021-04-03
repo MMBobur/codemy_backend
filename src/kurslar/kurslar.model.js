@@ -10,7 +10,6 @@ module.exports = (sequelize, DataTypes) => {
               notEmpty: true
           }
       },
-      
       img_title: {
           type: DataTypes.STRING,
           maxlength: 500,
