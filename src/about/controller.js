@@ -27,8 +27,7 @@ exports.create = (req, res) => {
     })
     .catch((err) => {
       res.status(500).send({
-        message:
-          err.message || "Some error occurred while creating the Tutorial.",
+        message: err.message || "Xatolik yuz berdi.",
       });
     });
 };
@@ -45,8 +44,7 @@ exports.findAll = (req, res) => {
     })
     .catch((err) => {
       res.status(500).send({
-        message:
-          err.message || "Some error occurred while retrieving tutorials.",
+        message: err.message || "Xatolik yuz berdi.",
       });
     });
 };
@@ -76,7 +74,7 @@ exports.update = (req, res) => {
     .then((num) => {
       if (num == 1) {
         res.send({
-          message: "Tutorial was updated successfully.",
+          message: "Muvaffaqiyatli yangilandi",
         });
       } else {
         res.send({
