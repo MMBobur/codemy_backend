@@ -19,6 +19,7 @@ exports.create = (req, res) => {
       res.status(500).send({
         message:
           err.message || "Some error occurred while creating the Staffs.",
+        status: "200 Status from Staff Page",
       });
     });
 };
