@@ -13,7 +13,7 @@ exports.findAll = (req, res) => {
     })
     .catch((err) => {
       res.status(500).send({
-        message: err.message || "It's Error from Aforizm.",
+        message: err.message || "It's Error from Aforizm. Hello world!!",
       });
     });
 };
